@@ -8,6 +8,7 @@ if [ ! -d "easy-proot" ]; then
 
     wget https://github.com/EXALAB/Anlinux-Resources/raw/master/Rootfs/Debian/amd64/debian-rootfs-amd64.tar.xz
     tar -xf debian-rootfs-amd64.tar.xz
+    rm -rf debian-rootfs-amd64.tar.xz
 
     # upgrade & install tor
     ./proot -S . echo -e '#!/bin/bash\n\napt update && apt upgrade -y\napt install tor -y' > first-run.sh
