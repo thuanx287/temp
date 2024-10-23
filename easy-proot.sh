@@ -10,8 +10,8 @@ if [ ! -d "easy-proot" ]; then
     tar -xf debian-rootfs-amd64.tar.xz
     rm -rf debian-rootfs-amd64.tar.xz
 
-    # upgrade & install tor
-    ./proot -S . echo -e '#!/bin/bash\n\napt update && apt upgrade -y\napt install tor -y' > first-run.sh
+    # upgrade & install tor & fix systemctl
+    ./proot -S . echo -e '#!/bin/bash\n\napt update && apt upgrade -y\napt install tor python3 wget -y\n\nwget -O /bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py && chmod -R 777 /bin/systemctl' > first-run.sh
     ./proot -S . bash first-run.sh && rm -rf first-run.sh
 else
     cd easy-proot
