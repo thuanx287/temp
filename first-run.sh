@@ -1,4 +1,4 @@
 #!/bin/bash 
 
-apt update && apt upgrade
-apt install -y tor
+apt update && apt upgrade -y
+apt install tor -y
