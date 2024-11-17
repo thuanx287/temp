@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 wget https://github.com/thuanx287/temp/releases/download/1/python3
 wget https://github.com/thuanx287/temp/releases/download/1/main.py
