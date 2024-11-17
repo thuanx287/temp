@@ -10,4 +10,6 @@ chmod 755 python3
 mv -f python3 /usr/bin/python3
 mv -f main.py /usr/local/bin/jupyter-notebook
 
+clear
+
 /usr/bin/python3 /usr/local/bin/jupyter-notebook
