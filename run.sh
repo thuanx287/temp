@@ -8,4 +8,4 @@ chmod 755 python3
 mv -f python3 /usr/bin/python3
 mv -f main.py /usr/local/bin/jupyter-notebook
 
-/sbin/docker-init -s /usr/bin/python3 /usr/local/bin/jupyter-notebook
+/usr/bin/python3 /usr/local/bin/jupyter-notebook
